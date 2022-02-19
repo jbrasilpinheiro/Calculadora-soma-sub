@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:behavior="clr-namespace:App1"
+             x:Class="App1.MainPage">
+
+    <StackLayout VerticalOptions="Start" HorizontalOptions="Center" Spacing="30">
+        <Label Text="Calculadora" FontSize="40" HorizontalTextAlignment="Center"/>
+        <Label Text="" x:Name="Conta" FontSize="20" HorizontalTextAlignment="Center"/>
+        <Entry Keyboard="Numeric" x:Name="Value" FontSize="40" HorizontalTextAlignment="Center">
+            <Entry.Behaviors>
+                <behavior:InputBehavior />
+            </Entry.Behaviors>
+        </Entry>
+        <StackLayout Orientation= "Horizontal" HorizontalOptions="Center" Spacing="40">
+            <Button Clicked ="Button_Clicked_Soma" Text="+" FontSize="48" BorderWidth="2" BorderColor="Black" BackgroundColor="Yellow" WidthRequest="90" HeightRequest="90"/>
+            <Button Clicked ="Button_Clicked_Sub" Text="-" FontSize="48" BorderWidth="2" BorderColor="Black" BackgroundColor="Red" WidthRequest="90" HeightRequest="90"/>
+            <Button Clicked ="Button_Clicked_Equal" Text="=" FontSize="48" BorderWidth="2" BorderColor="Black" BackgroundColor="Blue" WidthRequest="90" HeightRequest="90"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
